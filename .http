@@ -1,0 +1,81 @@
+# IP
+GET http://localhost:3000
+
+###
+
+GET http://localhost:3000/board
+
+###
+
+GET http://localhost:3000/board/:id
+
+###
+
+POST http://localhost:3000/board
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJKYXkgQ3V0bGVyIiwibmlja25hbWUiOiJtci5vbHltcGlhbiIsImlhdCI6MTY5OTEwMDYxMiwiZXhwIjoxNjk5MTA0MjEyfQ.Y4K5a5vr9xS_bbu75iYHuzCfIjq8jB54IkEeXA9AJVw
+
+{
+  "title": "게시물 제목입니다.",
+  "content": "게시물 내용입니다."
+}
+
+###
+
+PUT http://localhost:3000/board/:id
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJKYXkgQ3V0bGVyIiwibmlja25hbWUiOiJtci5vbHltcGlhbiIsImlhdCI6MTY5OTEwMDYxMiwiZXhwIjoxNjk5MTA0MjEyfQ.Y4K5a5vr9xS_bbu75iYHuzCfIjq8jB54IkEeXA9AJVw
+
+{
+  "title": "수정된 게시물 제목입니다."
+}
+
+###
+
+DELETE http://localhost:3000/board/:id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJKYXkgQ3V0bGVyIiwibmlja25hbWUiOiJtci5vbHltcGlhbiIsImlhdCI6MTY5OTEwMDYxMiwiZXhwIjoxNjk5MTA0MjEyfQ.Y4K5a5vr9xS_bbu75iYHuzCfIjq8jB54IkEeXA9AJVw
+
+###
+
+GET http://localhost:3000/user
+
+###
+
+GET http://localhost:3000/user/post-count
+
+###
+
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+  "username": "test-username",
+  "password": "test-password",
+  "nickname": "test-nickname",
+}
+
+###
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+  "username": "test-username",
+  "password": "test-password"
+}
+
+###
+
+POST http://localhost:3000/passport/login
+Content-Type: application/json
+
+{
+  "username": "test-username",
+  "password": "test-password"
+}
+
+###
+
+GET http://localhost:3000/passport/my-info
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJKYXkgQ3V0bGVyIiwibmlja25hbWUiOiJtci5vbHltcGlhbiIsImlhdCI6MTY5OTA5ODk3MCwiZXhwIjoxNjk5MTAyNTcwfQ.f7Xl4iXaCVlVpgkuBPFzhbo2wZVSyO5gIBIOekbWnjA
